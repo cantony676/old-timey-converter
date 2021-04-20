@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Converterthingy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <style>
+    body{
+      background-image: url(paper.jpg);
+    }
+    h1{
+      font-size: 50px;
+      font-family: 'Tangerine', cursive;
+    }
+    </style>
+    <script>
+    function mitfur(){
+      var end = document.getElementById('id2').value;
+      end = parseInt(end);
+      var result = "";
+      var p = document.getElementById('id');
+      p = parseInt(p);
+      var base = "";
+      var prep = "";
+      for(var i = p; i<=end; i++){
+        result = result+i*8+"<br>";
+        base = base + i +"<br>";
+      }
+      document.getElementById('quip2').innerHTML=result;
+      document.getElementById('quip').innerHTML=base;
+      document.getElementById('U1').innerHTML='Miles';
+      document.getElementById('U2').innerHTML='Furlongs';
+    } function slugpound(){
+      var end = document.getElementById('id2').value;
+      end = parseInt(end);
+      var result = "";
+      var p = document.getElementById('id');
+      var base = "";
+      p = parseInt(p);
+      var prep = "";
+      for(var i = p; i<=end; i++){
+        result = result+i*32.174+"<br>";
+        base = base + i +"<br>";
+      }
+      document.getElementById('quip2').innerHTML=result;
+      document.getElementById('quip').innerHTML=base;
+      document.getElementById('U1').innerHTML='Slugs';
+      document.getElementById('U2').innerHTML='Pounds';
+    } function fortday(){
+      var end = document.getElementById('id2').value;
+      end = parseInt(end);
+      var result = "";
+      var p = document.getElementById('id');
+      var base = "";
+      var prep = "";
+      p = parseInt(p);
+      for(var i = p; i<=end; i++){
+        result = result+i*14+"<br>";
+        base = base + i +"<br>";
+      }
+      document.getElementById('quip2').innerHTML=result;
+      document.getElementById('quip').innerHTML=base;
+      document.getElementById('U1').innerHTML='Fortnights';
+      document.getElementById('U2').innerHTML='Days';
+    }
+
+    </script>
+  </head>
+  <h1>How art thee travell'r?</h1>
+  <h4>desire thou art reade to conv'rt some units! </h4>
+
+  <body>
+    <p>what's the lowest value thee wanteth to conv'rt?</p>
+    <input type="text" value="Start Value" id = 'id'>
+    <p>what's the greatest value thee wanteth to conv'rt?</p>
+    <input type="text" value="End Value" id = 'id2'>
+    <input type="button" value = "Miles to Furlongs" onclick="mitfur()">
+    <input type="button" value = "FortNights to Days" onclick="fortday()">
+    <input type="button" value = "Slugs to Pounds" onclick="slugpound()">
+    <table>
+      <tr><td id = "U1"></td><td id = 'U2'></td></tr>
+      <tr>
+        <td><p id = 'quip'></p></td>
+        <td><p id = 'quip2'></p></td>
+      </tr>
+    </table>
+
+  </body>
+</html>
