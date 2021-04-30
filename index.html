@@ -18,23 +18,26 @@
       var end = document.getElementById('id2').value;
       end = parseInt(end);
       var result = "";
-      var p = document.getElementById('id');
+      var p = document.getElementById('id').value;
       p = parseInt(p);
       var base = "";
-      var prep = "";
+      var prep = 0;
       for(var i = p; i<=end; i++){
-        result = result+i*8+"<br>";
+        prep = i * 8;
+        result = result+ prep+"<br>";
         base = base + i +"<br>";
       }
       document.getElementById('quip2').innerHTML=result;
       document.getElementById('quip').innerHTML=base;
       document.getElementById('U1').innerHTML='Miles';
       document.getElementById('U2').innerHTML='Furlongs';
-    } function slugpound(){
+    }
+
+    function slugpound(){
       var end = document.getElementById('id2').value;
       end = parseInt(end);
       var result = "";
-      var p = document.getElementById('id');
+    var p = document.getElementById('id').value;
       var base = "";
       p = parseInt(p);
       var prep = "";
@@ -50,7 +53,7 @@
       var end = document.getElementById('id2').value;
       end = parseInt(end);
       var result = "";
-      var p = document.getElementById('id');
+    var p = document.getElementById('id').value;
       var base = "";
       var prep = "";
       p = parseInt(p);
